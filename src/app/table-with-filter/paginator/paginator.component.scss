@@ -1,0 +1,26 @@
+.paginator {
+  display: inline-block;
+  margin: 20px auto 20px auto;
+}
+.page_number {
+  text-align: center;
+  display: inline-block;
+  text-transform: uppercase;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 38px;
+  border: 2px solid #dfdfea;
+  line-height: 38px;
+  color: #dfdfea;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin: 5px;
+  transition: all 0.2s ease;
+}
+.page_number:hover {
+  cursor: pointer;
+  background-color: #39393e;
+}
+:host {
+  text-align: center;
+}

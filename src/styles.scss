@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  position: relative;
+  margin: 0;
+}
+
+html::before {
+  background: linear-gradient(175deg, #3d3838 13.5%, #040610 78.6%);
+  background-size: cover;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  content: ' ';
+  height: 100%;
+  left: 0;
+  right: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  will-change: transform;
+  z-index: -1;
+}
+
+body {
+  position: relative;
+  margin: 0;
+}
+
+body::before {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.1;
+  content: ' ';
+  height: 100%;
+  margin: 0 auto;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  will-change: transform;
+  z-index: -1;
+}

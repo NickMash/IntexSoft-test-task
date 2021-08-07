@@ -1,0 +1,9 @@
+<div class="paginator">
+  <div
+    *ngFor="let number of pages"
+    class="page_number"
+    (click)="openPage(pages.indexOf(number))"
+  >
+    {{pages.indexOf(number) + 1}}
+  </div>
+</div>

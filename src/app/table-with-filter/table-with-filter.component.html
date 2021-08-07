@@ -1,0 +1,18 @@
+<app-search-line
+  [filterFields]="filterFields"
+  [filter]="filter"
+  (updateValue)="filter = $event"
+></app-search-line>
+<app-table
+  [columns]="columns"
+  [records]="records"
+  [filter]="filter"
+  (updateRecords)="currentRecords = $event"
+  [page]="page"
+></app-table>
+<app-paginator
+  [currentRecords]="currentRecords"
+  [pageSize]="pageSize"
+  [page]="page"
+  (updatePage)="page = $event"
+></app-paginator>

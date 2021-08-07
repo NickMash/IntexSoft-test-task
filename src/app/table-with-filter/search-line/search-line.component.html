@@ -1,0 +1,20 @@
+<div class="inset" [formGroup]="loginForm">
+  <div class="search">
+    <input
+      type="text"
+      class="searchTerm"
+      formControlName="searchRequest"
+      placeholder="Search for..."
+      (ngModelChange)="searchMethod()"
+    >
+    <button type="submit" class="searchButton" (click)="searchMethod()">
+      Search
+    </button>
+  </div>
+  <select formControlName="sorting" (change)="searchMethod()">
+    <option value="">Choose search column</option>
+    <option *ngFor="let sort of filterFields" [ngValue]="sort">{{sort}}
+    </option>
+  </select>
+  <div class="warning" *ngIf="isSearchColumnValue">Please, choose sorting column!</div>
+</div>

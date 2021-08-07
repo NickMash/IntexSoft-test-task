@@ -1,0 +1,14 @@
+<main class="main_table__container">
+  <div *ngFor="let item of columns" class="column">
+    <div class="header">
+      <div class="sort" (click)="directSort(item)">↓</div>
+      <span>{{item}}</span>
+      <div class="sort" (click)="reverseSort(item)">↑</div>
+    </div>
+    <div *ngFor="let cell of page" class="cell">
+      <a *ngIf="isLink(cell[item])" href="{{cell[item]}}" target="_blank">{{cell[item]}}</a>
+      <img *ngIf="isImage(cell[item])" alt="" src="{{cell[item]}}" class="image" width="120" height="90">
+      <span *ngIf="!isImage(cell[item]) && !isLink(cell[item])" class="cell_span">{{cell[item]}}</span>
+    </div>
+  </div>
+</main>
